@@ -10,7 +10,7 @@ case $STATE in
                   exit 0
                   ;;
         "BACKUP") echo "bkp"
-                  #nginx -s stop
+                  nginx -s stop
                   exit 0
                   ;;
         "FAULT")  echo "fault"

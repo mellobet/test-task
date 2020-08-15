@@ -19,14 +19,13 @@ keepalived (floating ip version) - Half bonus points? :)
  - 1b. http://localhost:8880/ (shows master message)
  - 1c. http://localhost:8881/ (unavailable - nginx process never was up)
 
- - 2. "docker pause/kill keepalived_master"
+ - 2a. "docker pause/kill keepalived_master"
  
  - 3a. http://172.198.222.30/ (shows bkp message - may need browser reload)
  - 3b. http://localhost:8880/ (unavailable - nginx container was killed - may need browser reload)
  - 3c. http://localhost:8881/ (shows bkp message - may need browser reload)
 
- - 4a. Wait 20 seconds
- - 4b. "docker-compose up -d"  To fill out the docker compose app.
+ - 4a. "docker-compose up -d"  To fill out the docker compose app.
 
  - 3a. http://172.198.222.30/ (shows master message)
  - 3b. http://localhost:8880/ (shows master message)

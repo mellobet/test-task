@@ -1,4 +1,4 @@
-Test Task
+# Test Task
 
 keepalived (floating ip version)
  - virtual floating IP managed by keepalived, docker capability NET_ADMIN was added in docker-compose to allow this.
@@ -10,10 +10,7 @@ keepalived (floating ip version)
 - Master URL: http://localhost:8880/
 - Backup URL: http://localhost:8881/
 
-
-
-
-DRP - Instructions.
+ # DRP - Instructions.
 
  0. $ docker compose up -d
 

@@ -4,6 +4,7 @@ resource "aws_instance" "instance_1" {
   subnet_id              = aws_subnet.test-task-subnet_1.id
   vpc_security_group_ids = [aws_security_group.ssh.id]
   key_name               = aws_key_pair.ec2key.key_name
+  user_data              = file("./user_data.sh")
 
   tags = {
     env = var.env_tag

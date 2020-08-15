@@ -18,4 +18,3 @@ RUN chmod +x /states.sh
 EXPOSE 80
 
 ENTRYPOINT [ "entrypoint.sh" ]
-# CMD [ "-g", "daemon off;" ]

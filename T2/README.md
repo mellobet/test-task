@@ -1,6 +1,7 @@
 # Test Task - Docker-Keepalived-Nginx
 
-keepalived (floating ip version)
+keepalived (floating ip version) - Half bonus points? :)
+
  - virtual floating IP managed by keepalived, docker capability NET_ADMIN was added in docker-compose to allow this.
  - Nginx is turned of on non MASTER states via "states.sh" script.
  - Custom network ranges are provided in docker-compose file. 172.198.222.0/24. Also fixed IPs for the containers.
@@ -10,7 +11,7 @@ keepalived (floating ip version)
 - Master URL: http://localhost:8880/
 - Backup URL: http://localhost:8881/
 
- ### DRP - Instructions.
+ ## DRP - Instructions.
 
  - 0. $ docker compose up -d
 
@@ -18,7 +19,7 @@ keepalived (floating ip version)
  - 1b. http://localhost:8880/ (shows master message)
  - 1c. http://localhost:8881/ (unavailable - nginx process never was up)
 
- - 2. "docker kill keepalived_master"
+ - 2. "docker pause/kill keepalived_master"
  
  - 3a. http://172.198.222.30/ (shows bkp message - may need browser reload)
  - 3b. http://localhost:8880/ (unavailable - nginx container was killed - may need browser reload)

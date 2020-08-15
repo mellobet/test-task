@@ -10,7 +10,7 @@ keepalived (floating ip version)
 - Master URL: http://localhost:8880/
 - Backup URL: http://localhost:8881/
 
- # DRP - Instructions.
+ ### DRP - Instructions.
 
  - 0. $ docker compose up -d
 
@@ -18,13 +18,13 @@ keepalived (floating ip version)
  - 1b. http://localhost:8880/ (shows master message)
  - 1c. http://localhost:8881/ (unavailable - nginx process never was up)
 
- - 2. $ docker kill keepalived_master
+ - 2. "docker kill keepalived_master"
  
  - 3a. http://172.198.222.30/ (shows bkp message - may need browser reload)
  - 3b. http://localhost:8880/ (unavailable - nginx container was killed - may need browser reload)
  - 3c. http://localhost:8881/ (shows bkp message - may need browser reload)
 
- - 4. $ watch -n 5 "docker-compose up -d" to fill out the docker compose app.
+ - 4. "docker-compose up -d"  To fill out the docker compose app.
 
  - 3a. http://172.198.222.30/ (shows master message)
  - 3b. http://localhost:8880/ (shows master message)

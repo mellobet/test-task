@@ -3,6 +3,7 @@
 *.tfstate
 *.tfstate.*
 
+# I wanted this file to be included this time.
 #*.tfvars
 
 override.tf
@@ -12,3 +13,9 @@ override.tf.json
 
 .terraformrc
 terraform.rc
+
+
+# python venv
+venv/*
+
+settings.json

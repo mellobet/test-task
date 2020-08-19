@@ -9,6 +9,8 @@ import re
 from urllib3.exceptions import ReadTimeoutError
 import tempfile
 
+# ToDo: More Exception catching. Functions. retry management.
+
 # Configs
 BASE_URL = 'https://dumps.wikimedia.org/other/pagecounts-raw/2016/2016-01/'
 FILENAME_HEAD = 'pagecounts-'
@@ -56,6 +58,8 @@ for pg_file in pg_files:
             chunks += 1
             
         r.release_conn()
+
+        # Reset fp pointer
         fp.seek(0)
 
         # Opened as text (rt) no decoding needed.
